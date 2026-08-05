@@ -1,8 +1,12 @@
 title: "2026"
 description: "afknapping — personal site"
 baseurl: "/2026"
+# github-pages gem defaults to theme: jekyll-theme-primer unless a site
+# opts out explicitly — that theme ships its own assets/css/style.scss,
+# which rendered to the same output path as ours and clobbered it.
+theme: null
 # Bump on every style.css change to bust browser/CDN caches.
-css_version: 3
+css_version: 4
 markdown: kramdown
 kramdown:
   input: GFM
