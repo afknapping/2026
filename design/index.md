@@ -45,7 +45,7 @@ Tokens and markdown style reference. Placeholder palette — will be replaced on
   </div>
 </div>
 
-**Type** — `--font-body`: Atkinson Hyperlegible, self-hosted (400/700, roman/italic). `--font-mono`: system monospace stack, used for code.
+**Type** — `--font-body`: Atkinson Hyperlegible Next, self-hosted (regular/extrabold, roman/italic). `--font-mono`: Atkinson Hyperlegible Mono, self-hosted, used for code.
 
 **Layout** — `--measure`: 42rem max content width. `--space`: 1.5rem base rhythm unit.
 

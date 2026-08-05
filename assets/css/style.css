@@ -1,33 +1,41 @@
 /* ---- Fonts -----------------------------------------------------------
-   Atkinson Hyperlegible, self-hosted. Latin subset only, 2 weights x
-   2 styles (regular/bold, roman/italic) — enough for body copy. */
+   Atkinson Hyperlegible Next, self-hosted. Latin subset only, regular +
+   extrabold (mapped to weight 700 so existing `font-weight: 700` rules
+   render as extrabold), roman/italic. Atkinson Hyperlegible Mono for code. */
 @font-face {
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Atkinson Hyperlegible Next";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/assets/fonts/AtkinsonHyperlegible-400.woff2") format("woff2");
+  src: url("/assets/fonts/AtkinsonHyperlegibleNext-400.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Atkinson Hyperlegible Next";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("/assets/fonts/AtkinsonHyperlegible-400-italic.woff2") format("woff2");
+  src: url("/assets/fonts/AtkinsonHyperlegibleNext-400-italic.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Atkinson Hyperlegible Next";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/assets/fonts/AtkinsonHyperlegible-700.woff2") format("woff2");
+  src: url("/assets/fonts/AtkinsonHyperlegibleNext-800.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Atkinson Hyperlegible Next";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("/assets/fonts/AtkinsonHyperlegible-700-italic.woff2") format("woff2");
+  src: url("/assets/fonts/AtkinsonHyperlegibleNext-800-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/AtkinsonHyperlegibleMono-400.woff2") format("woff2");
 }
 
 /* ---- Tokens ------------------------------------------------------------
@@ -43,8 +51,8 @@
   --code-bg: #F1F0EA;
   --code-text: #3A3A34;
 
-  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+  --font-body: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
 
   --measure: 42rem;
   --space: 1.5rem;
