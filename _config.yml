@@ -1,0 +1,15 @@
+title: "2026"
+description: "afknapping — personal site"
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - ANALYSIS.md

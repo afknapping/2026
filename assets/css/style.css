@@ -1,0 +1,192 @@
+/* ---- Fonts -----------------------------------------------------------
+   Atkinson Hyperlegible, self-hosted. Latin subset only, 2 weights x
+   2 styles (regular/bold, roman/italic) — enough for body copy. */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/AtkinsonHyperlegible-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/AtkinsonHyperlegible-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/AtkinsonHyperlegible-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/AtkinsonHyperlegible-700-italic.woff2") format("woff2");
+}
+
+/* ---- Tokens ------------------------------------------------------------
+   Placeholder palette — swap these once the visual identity is picked.
+   Every colour on the page flows through these custom properties. */
+:root {
+  --bg: #FDFCFA;
+  --text: #2B2B28;
+  --heading: #14140F;
+  --accent: #2E5CE6;
+  --muted: #6B6B63;
+  --rule: #DEDCD4;
+  --code-bg: #F1F0EA;
+  --code-text: #3A3A34;
+
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+
+  --measure: 42rem;
+  --space: 1.5rem;
+}
+
+/* ---- Reset / base ------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Layout -------------------------------------------------------------- */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+}
+.site-nav {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space) 1.25rem;
+  display: flex;
+  gap: 1.5rem;
+}
+.site-nav a {
+  color: var(--heading);
+  font-weight: 700;
+  text-decoration: none;
+}
+.site-nav a:hover { color: var(--accent); }
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space) 1.25rem 4rem;
+}
+
+/* ---- Markdown content styles --------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 2em 0 0.6em;
+}
+h1 { font-size: 2.25rem; margin-top: 0; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+p { margin: 0 0 1.2em; }
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+strong { font-weight: 700; color: var(--heading); }
+em { font-style: italic; }
+
+ul, ol {
+  margin: 0 0 1.2em;
+  padding-left: 1.5em;
+}
+li + li { margin-top: 0.3em; }
+li > ul, li > ol { margin-top: 0.3em; margin-bottom: 0; }
+
+blockquote {
+  margin: 0 0 1.2em;
+  padding: 0.2em 0 0.2em 1.1em;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25em;
+}
+pre {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 1em 1.2em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin: 0 0 1.2em;
+}
+pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.2em;
+  font-size: 0.95em;
+}
+th, td {
+  text-align: left;
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid var(--rule);
+}
+th { color: var(--heading); font-weight: 700; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5em 0;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* ---- Design page swatches ------------------------------------------------ */
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 1rem;
+  margin: 0 0 2em;
+}
+.token-swatch {
+  border: 1px solid var(--rule);
+  border-radius: 0.5em;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+.token-swatch__color {
+  height: 4rem;
+}
+.token-swatch__label {
+  padding: 0.5em 0.75em;
+  background: var(--bg);
+}
+.token-swatch__label code {
+  display: block;
+  margin-top: 0.2em;
+}

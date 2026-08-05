@@ -1,0 +1,13 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+.DS_Store
+
+# Local bundler (4.0.17, from this machine's very new Ruby) resolves gem
+# versions unlike GitHub Pages' own build environment. Let Pages resolve
+# its own lockfile instead of shipping one that may not match.
+Gemfile.lock
+.claude/
