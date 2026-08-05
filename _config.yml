@@ -1,7 +1,8 @@
 title: "2026"
 description: "afknapping — personal site"
+baseurl: "/2026"
 # Bump on every style.css change to bust browser/CDN caches.
-css_version: 2
+css_version: 3
 markdown: kramdown
 kramdown:
   input: GFM
